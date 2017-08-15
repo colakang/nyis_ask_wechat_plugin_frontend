@@ -1,0 +1,48 @@
+<!--pages/ask/ask.wxml-->
+
+
+<view class="container">
+<!-- <view class="header">
+  <icon type="safe_success" size="40"/>  
+</view> -->
+
+  <view class="header">
+    <form catchsubmit="formSubmit" catchreset="formReset">
+      <!-- <view class="search" style="display: flex"> -->
+      <view class="search">
+        <input class="wxSearch-input" name="keyword" bindinput="checkKeyword" maxlength="20" placeholder="请输入搜索的关键词" />
+          <view>{{keywordLength}}/20</view>    
+        <view wx:if="{{keywordLength > 0 }}" class="btn-area">
+          <button type="primary" formType="submit" size="mini" plain="true">搜索</button>
+        </view>
+        <view wx:else class="btn-area">
+          <button type="default" size="mini" plain="true">搜索</button>
+        </view>  
+      </view>
+    </form>
+  </view>
+</view>
+
+
+
+<view class="container">
+  <view class="questions-item-container"> 
+    <block wx:for="{{questions}}" wx:for-index="id">
+        <text wx:if="{{item.header}}" class="sub-title">{{item.header}}</text>  
+        <navigator wx:else url="../detail/detail?id={{item.question_postid}}"> 
+          <view class="questions-item" >
+              <view class="questions-item-right"> 
+              <text class="questions-item-title">{{item.title}}</text> 
+            </view>  
+          </view>
+           <view class="questions-item-bottom">
+           <text class="questions-item-date"> {{item.question_creation_date}}</text>
+           </view> 
+           <view class="questions-item-bottom">
+            <text class="questions-item-date">阅读量 {{item.views}}</text>
+          </view> 
+        </navigator>  
+      </block> 
+  </view> 
+</view> 
+

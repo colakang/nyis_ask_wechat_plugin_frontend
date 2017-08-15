@@ -1,0 +1,15 @@
+<view class="page_gap page_news">
+
+
+    <view id="font-adjust">
+          <view  id="newsRelative" class="news-item" >
+
+        <view>
+            <import src="../templates/news.wxml"/> 
+             <template is="newsDetail" data="{{...newsData}}"/> 
+        </view>
+        </view>
+    </view>
+</view>
+
+<text class="news-item" id="newsTitle">{{newsData.question_title}}</text> 
