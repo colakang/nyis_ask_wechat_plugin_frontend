@@ -1,0 +1,98 @@
+<!--index.wxml-->
+<view class="container">
+
+  <view class="questions-item-container">
+   <block wx:for="{{questionList}}" wx:for-index="id">
+       <text wx:if="{{item.header}}" class="sub-title">{{item.header}}</text>  
+        <view class="questions-item" >
+          <view class="questions-item-bottom">
+            <image style="width: 40px; height: 40px; background-color: #eeeeee;" mode="{{item.mode}}" src="{{item.question_avatarurl}}"></image>
+            <text class="questions-item-handle">{{item.question_handle}}</text>
+            <text class="questions-item-date">{{item.question_creation_date}}</text>
+          </view>
+           <view class="questions-item-right">
+            <text class="questions-item-title">{{item.question_title}}</text>
+          </view> 
+        <!-- </view> -->
+        <view class="questions-item-bottom"> </view>
+        <!-- <view class="questions-item" > -->
+        <view class="questions-item-right">
+            <view class="questions-item-content">
+           <block wx:for="{{item.content}}"  wx:for-index="idy"  wx:for-item="cellData">
+           <block  wx:if="{{cellData.type == 'view'}}">
+            <view class="p">
+                <block  wx:for="{{cellData.child}}" wx:key="text">
+                    <block  wx:if="{{item.type == 'a'}}">
+                        <text class="a" data-seccode="{{item.attr['data-seccode']}}" data-secname="{{item.attr['data-secname']}}" bindtap="stockClick">{{item.text}}</text>
+                    </block>
+                    <block  wx:else>
+                        <text>{{item.text}}</text>
+                    </block>
+                </block>
+            </view>
+           </block>
+          </block>
+         </view> 
+        </view>  
+        </view>
+  </block>  
+  
+    <block wx:for="{{answerList}}" wx:for-index="id">
+       <text wx:if="{{item.header}}" class="sub-title">{{item.header}}</text>  
+       <!-- <navigator wx:else url="../detail/detail?id={{item.id}}">  -->
+        <view class="questions-item" >
+          <view class="questions-item-bottom">
+          <image style="width: 40px; height: 40px; background-color: #eeeeee;" mode="{{item.mode}}" src="{{item.answer_avatarurl}}"></image>
+            <text class="questions-item-handle">{{item.answer_handle}}</text>
+            <text class="questions-item-date">{{item.answer_creation_date}}</text>
+            </view> 
+           <view class="questions-item-right">
+            <text class="questions-item-title">{{item.answer_content}}</text>
+          </view> 
+        </view>
+       <!-- </navigator>   -->
+    </block> 
+
+    <block wx:for="{{commentList}}" wx:for-index="id">
+       <text wx:if="{{item.header}}" class="sub-title">{{item.header}}</text>  
+       <!-- <navigator wx:else url="../detail/detail?id={{item.id}}">  -->
+        <view class="questions-item" >
+         <view class="questions-item-bottom">
+         <image style="width: 40px; height: 40px; background-color: #eeeeee;" mode="{{item.mode}}" src="{{item.comment_avatarurl}}"></image>
+            <text class="questions-item-handle">{{item.comment_handle}}</text>
+            <text class="questions-item-date">{{item.comment_creation_date}}</text>
+            </view> 
+           <view class="questions-item-right">
+            <text class="questions-item-content">{{item.comment_content}}</text>
+          </view> 
+        </view>
+       <!-- </navigator>   -->
+    </block> 
+
+    <block wx:for="{{answercommentList}}" wx:for-index="id">
+       <text wx:if="{{item.header}}" class="sub-title">{{item.header}}</text>  
+       <!-- <navigator wx:else url="../detail/detail?id={{item.id}}">  -->
+        <view class="questions-item" >
+         <view class="questions-item-bottom">
+         <image style="width: 40px; height: 40px; background-color: #eeeeee;" mode="{{item.mode}}" src="{{item.comment_avatarurl}}"></image>
+            <text class="questions-item-handle">{{item.comment_handle}}</text>
+            <text class="questions-item-date">{{item.comment_creation_date}}</text>
+            </view> 
+           <view class="questions-item-right">
+            <text class="questions-item-content">{{item.comment_content}}</text>
+          </view> 
+        </view>
+       <!-- </navigator>   -->
+    </block> 
+  </view>
+  
+  <view clsss = "show-btn">
+      <navigator wx:for="{{questionList}}" wx:for-index="id" url="../answer/answer?id={{item.question_id}}"> 
+        <button class="load-btn" size="mini" loading="{{loading}}" plain="{{plain}}" bindtap="toAnswer"> 回答 </button>
+        <button class="load-btn" size="mini" loading="{{loading}}" plain="{{plain}}" bindtap="toAsk"> 提问 </button>  
+      </navigator>
+  </view>
+
+</view>
+
+

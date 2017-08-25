@@ -1,0 +1,32 @@
+
+<view class="container">
+<view class="page-body">
+    <form catchsubmit="formSubmit" catchreset="formReset">
+      <view class="page-section">
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__bd">
+              <textarea name="content" bindinput="checkContent" maxlength="140" placeholder="请输入回答的内容" />
+              <view>{{contentLength}}/140</view>            
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <block>
+      <view wx:if="{{contentLength > 0 }}" class="show-btn">
+        <button class = "load-btn" formType="submit">提交</button>
+      </view>
+      <view wx:else class="show-btn">
+        <button class = "default-btn" >提交</button>
+      </view>
+      </block>  
+    </form>
+
+      <view class="section section_gap" wx:for="{{array}}" wx:for-item="item">
+       <image class = "image" mode="{{item.mode}}" src="{{'/images/image_placeholder_samll.png'}}"></image>
+      </view>
+  </view>
+
+</view>
+

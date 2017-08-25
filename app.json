@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/ask/ask",
+    "pages/user/user",
+    "pages/test/test",
+    "pages/detail/detail",
+    "pages/answer/answer",
+    "pages/news/news",
+    "pages/search/search",
+    "pages/tag/tag",
+    "pages/newslist/newslist"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#303030",
+    "navigationBarTitleText": "小纽问答",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#ffffff",
+    "selectedColor": "#8CCEFD",
+    "borderStyle": "white",
+    "backgroundColor": "#303030",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/icon_API.png",
+        "selectedIconPath": "images/icon_API.png",
+        "text": "热门"
+      },
+      {
+        "pagePath": "pages/ask/ask",
+        "iconPath": "images/icon_component.png",
+        "selectedIconPath": "images/icon_component.png",
+        "text": " 提问"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "images/icon_component.png",
+        "selectedIconPath": "images/icon_component.png",
+        "text": " 与我相关"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "iconPath": "images/icon_component.png",
+        "selectedIconPath": "images/icon_component.png",
+        "text": "搜索"
+      },
+      {
+        "pagePath": "pages/newslist/newslist",
+        "iconPath": "images/icon_component.png",
+        "selectedIconPath": "images/icon_component.png",
+        "text": "新闻"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 120000
+  }
+}

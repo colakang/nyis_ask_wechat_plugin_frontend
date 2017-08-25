@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container">
+  
+
+  <view class="questions-item-container">
+  <block wx:for="{{news}}" wx:for-index="id">
+       <text wx:if="{{item.header}}" class="sub-title">{{item.header}}</text>  
+       <navigator wx:else url="../news/news?id={{item.question_id}}"> 
+        <view class="questions-item" >
+          <!-- <view class="news-item-left">
+            <image src="{{item.images[0]}}" class="news-image"/>
+          </view> -->
+           <view class="questions-item-right">
+            <text class="questions-item-title">{{item.question_title}}</text>
+          </view> 
+        </view>
+         <view class="questions-item-bottom">
+            <text class="questions-item-date">{{item.question_creation_date}}</text>
+            <br />
+            <text class="questions-item-date">{{item.question_tags}}</text>
+        </view> 
+       </navigator>  
+    </block> 
+  </view>
+</view>
