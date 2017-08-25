@@ -4,8 +4,8 @@ var app = getApp()
 var utils = require('../../utils/util.js')
 
 
-var myListUrl = 'http://192.168.56.101/api/v1/q2a/mine/';
-var loginUrl = 'http://192.168.56.101/api/v1/wx';
+var myListUrl = 'http://ask.nyis.com/api/v1/q2a/mine/';
+var loginUrl = 'http://ask.nyis.com/api/v1/wx';
 var debugUrl = '?XDEBUG_SESSION_START=16415';
 var qcount = 0;
 var acount = 0;

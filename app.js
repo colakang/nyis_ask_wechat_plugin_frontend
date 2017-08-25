@@ -1,8 +1,8 @@
 //app.js
 var utils = require('/utils/util.js')
 
-var loginUrl = 'http://192.168.56.101/api/v1/wx';
-var questionUrl = 'http://192.168.56.101/api/v1/q2a/questions';
+var loginUrl = 'http://ask.nyis.com/api/v1/wx';
+var questionUrl = 'http:/ask.nyis.com/api/v1/q2a/questions';
 var debugUrl = '?XDEBUG_SESSION_START=16415';
 
   /**

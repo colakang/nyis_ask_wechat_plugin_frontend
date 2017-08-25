@@ -2,7 +2,7 @@
 
 //获取应用实例
 var app = getApp()
-var searchUrl = 'http://192.168.56.101/api/v1/q2a/search';
+var searchUrl = 'http://ask.nyis.com/api/v1/q2a/search';
 var debugUrl = '?XDEBUG_SESSION_START=16415';
 
 var keyword = '';

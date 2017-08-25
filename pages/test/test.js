@@ -3,7 +3,7 @@
 //获取应用实例
 var app = getApp()
 //var baseUrl = 'http://z.cn/api/v1';
-var baseUrl = 'http://192.168.56.101/api/v1/wx';
+var baseUrl = 'http://ask.nyis.com/api/v1/wx';
 var debugUrl = '?XDEBUG_SESSION_START=16415';
 Page({
   onLoad: function () {

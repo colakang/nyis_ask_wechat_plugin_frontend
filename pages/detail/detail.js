@@ -31,8 +31,8 @@ Page({
   onLoad: function (options) {
     var that = this
     wx.request({
-      url: 'http://192.168.56.101/api/v1/q2a/questions/' + options.id,
-      //url: 'http://192.168.56.101/api/v1/q2a/questions/11',
+      url: 'http://ask.nyis.com/api/v1/q2a/questions/' + options.id,
+      //url: 'http://ask.nyis.com/api/v1/q2a/questions/11',
       method: "GET",
       headers: {
         'Content-Type': 'application/json'

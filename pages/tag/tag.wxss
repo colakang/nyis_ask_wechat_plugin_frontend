@@ -97,15 +97,32 @@
   font-size: 8px;
 }
 
-.show-btn{
+/* .show-btn{
 display: flex;
 }
 
 
 .load-btn{
-  /* display: flex; */
   margin-left: 8px;
   margin-right: 8px;
   margin-top: 16px;
   margin-bottom: 16px;
+} */
+
+.show-btn{
+display: flex;
+justify-content: center;
 }
+
+
+.load-btn{
+
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  background-color: #303030;
+  color: #f2f2f2;
+  border: 1px solid #f2f2f2;
+  border-radius: 300;
+}  
