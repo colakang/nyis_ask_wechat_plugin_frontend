@@ -2,8 +2,7 @@
 
 //获取应用实例
 var app = getApp()
-var searchUrl = 'http://ask.nyis.com/api/v1/q2a/search';
-var debugUrl = '?XDEBUG_SESSION_START=16415';
+var searchUrl = getApp().globalData.searchUrl;
 
 var keyword = '';
 var query = '';

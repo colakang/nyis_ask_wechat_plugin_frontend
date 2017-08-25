@@ -1,14 +1,15 @@
 //index.js
 //获取应用实例
 var app = getApp()
+var test = getApp().globalData.test;
+
 var utils = require('../../utils/util.js')
 
-var loginUrl = 'http://ask.nyis.com/api/v1/wx';
-var questionUrl = 'http://ask.nyis.com/api/v1/q2a/questions';
-var newsUrl = 'http://ask.nyis.com/api/v1/q2a/news';
-var debugUrl = '?XDEBUG_SESSION_START=16415';
-var searchUrl = 'http://ask.nyis.com/api/v1/q2a/search';
-var tagsUrl = 'http://ask.nyis.com/api/v1/q2a/tags';
+var loginUrl = getApp().globalData.loginUrl;
+var questionUrl = getApp().globalData.questionUrl;
+var newsUrl = getApp().globalData.newsUrl;
+var searchUrl = getApp().globalData.searchUrl;
+var tagsUrl = getApp().globalData.tagsUrl;
 
 var keyword = '';
 var query = '';

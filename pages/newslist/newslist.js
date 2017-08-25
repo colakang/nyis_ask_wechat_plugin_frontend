@@ -3,12 +3,7 @@
 var app = getApp()
 var utils = require('../../utils/util.js')
 
-var loginUrl = 'http://ask.nyis.com/api/v1/wx';
-var questionUrl = 'http://ask.nyis.com/api/v1/q2a/questions';
-var newsUrl = 'http://ask.nyis.com/api/v1/q2a/news';
-var debugUrl = '?XDEBUG_SESSION_START=16415';
-var searchUrl = 'http://ask.nyis.com/api/v1/q2a/search';
-var tagsUrl = 'http://ask.nyis.com/api/v1/q2a/tags';
+var questionUrl = getApp().globalData.questionUrl;
 
 var keyword = '';
 var query = '';

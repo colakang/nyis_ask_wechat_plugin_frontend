@@ -3,9 +3,8 @@
 //获取应用实例
 var app = getApp()
 
-var loginUrl = 'http://ask.nyis.com/api/v1/wx';
-var questionUrl = 'http://ask.nyis.com/api/v1/q2a/questions';
-var debugUrl = '?XDEBUG_SESSION_START=16415';
+var loginUrl = getApp().globalData.loginUrl;
+var questionUrl = getApp().globalData.questionUrl;
 
 var userid ='';
 var title =''; 
@@ -18,7 +17,7 @@ Page({
       mode: 'scaleToFill',
       text: 'scaleToFill：不保持纵横比缩放图片，使图片完全适应'
     }],
-    // src: 'http://wx4.sinaimg.cn/large/e6c2ff9egy1fddqz8ypr2j21kw15d7dp.jpg'
+
   },
 
   /**

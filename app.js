@@ -1,9 +1,15 @@
 //app.js
 var utils = require('/utils/util.js')
 
-var loginUrl = 'http://ask.nyis.com/api/v1/wx';
-var questionUrl = 'http:/ask.nyis.com/api/v1/q2a/questions';
-var debugUrl = '?XDEBUG_SESSION_START=16415';
+// var loginUrl = 'http://ask.nyis.com/api/v1/wx';
+// var questionUrl = 'http:/ask.nyis.com/api/v1/q2a/questions';
+// var newsUrl = 'http://ask.nyis.com/api/v1/q2a/news';
+// var searchUrl = 'http://ask.nyis.com/api/v1/q2a/search';
+// var tagsUrl = 'http://ask.nyis.com/api/v1/q2a/tags';
+// var loginUrl = 'http://ask.nyis.com/api/v1/wx';
+// var questionUrl = 'http://ask.nyis.com/api/v1/q2a/questions';
+//var answerUrl = 'http://ask.nyis.com/api/v1/q2a/answers';
+
 
   /**
    * 全局信息，运行时加载
@@ -12,6 +18,20 @@ var debugUrl = '?XDEBUG_SESSION_START=16415';
    */
 
 App({
+  globalData: {
+    test: "test",
+    loginUrl : 'http://ask.nyis.com/api/v1/wx',
+    questionUrl: 'http://ask.nyis.com/api/v1/q2a/questions',
+    answerUrl : 'http://ask.nyis.com/api/v1/q2a/answers',
+    newsUrl: 'http://ask.nyis.com/api/v1/q2a/news',
+    searchUrl: 'http://ask.nyis.com/api/v1/q2a/search',
+    tagsUrl:'http://ask.nyis.com/api/v1/q2a/tags',
+    myListUrl : 'http://ask.nyis.com/api/v1/q2a/mine/',
+
+  },
+
+
+
   onLaunch: function () {
 
     wx.login({
@@ -21,7 +41,7 @@ App({
         console.log('code');
         console.log(code);
         wx.request({
-          url: loginUrl + '/tokens',
+          url: 'http://ask.nyis.com/api/v1/wx' + '/tokens',
 
           data: {
             code: code,

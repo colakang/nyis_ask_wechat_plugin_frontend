@@ -2,9 +2,8 @@
 var app = getApp()
 var utils = require('../../utils/util.js')
 
-var debugUrl = '?XDEBUG_SESSION_START=16415';
-var searchUrl = 'http://ask.nyis.com/api/v1/q2a/search';
-var tagsUrl = 'http://ask.nyis.com/api/v1/q2a/tags';
+var searchUrl = getApp().globalData.searchUrl;
+var tagsUrl = getApp().globalData.tagsUrl;
 
 var keyword = '';
 var query = '';

@@ -1,4 +1,5 @@
 var R_htmlToWxml = require('../../utils/htmlToWxml.js');//引入公共方法
+var app = getApp()
 
 Page({
   data: {
@@ -7,11 +8,7 @@ Page({
     answerList: '',
     commentList: '',
     answercommentList:'' ,
-    // array: [{
-    //   mode: 'scaleToFill',
-    //   text: 'scaleToFill：不保持纵横比缩放图片，使图片完全适应'
-    // }],
-    // src: 'http://192.168.56.101/'
+
   },
 
   imageError: function (e) {
@@ -31,8 +28,8 @@ Page({
   onLoad: function (options) {
     var that = this
     wx.request({
+
       url: 'http://ask.nyis.com/api/v1/q2a/questions/' + options.id,
-      //url: 'http://ask.nyis.com/api/v1/q2a/questions/11',
       method: "GET",
       headers: {
         'Content-Type': 'application/json'
